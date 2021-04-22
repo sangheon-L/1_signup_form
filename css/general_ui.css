@@ -1,0 +1,182 @@
+/*general UI*/
+input{
+  padding: 10px 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/*input size type*/
+input.big{
+  width: 478px;
+
+}
+
+input.middle{
+  width: 270px;
+}
+
+input.small{
+  width: 150px;
+}
+
+input.tiny{
+  width: 100px;
+}
+
+/*input common*/
+
+input:focus{
+  outline: none;
+  border: 1px solid #9d9d9d;
+}
+
+input[type=checkbox]{
+  display: none;
+
+}
+
+input[type=checkbox] + label{
+  position: relative;
+
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #999 ;
+  margin: 5px 0 0 12px;  /*낟중에 layout 요소가 될것같음*/
+}
+
+
+
+/*checkbox label 만들 start*/
+input[type=checkbox]:checked + label:after{
+  content: "";
+  position: absolute;
+  width: 0;  /*참고로 width 가 0이라도 보더는 생성됨*/
+  height: 1.5px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  left: 50%;
+  top: 40%;  /*transform rotate 시  탑50%는 먼가 쳐져보여서 40%로 수정*/
+  transform: translate(-50%, -50%) rotate(45deg);/* rotate는 트랜스폼 뒤에 두라  순서바끼면 이상해짐*/
+}
+/*checkbox label 만들 end*/
+
+
+
+
+/*button common start*/
+
+/*button style initialize start*/
+button{
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-sizing: border-box;/*기본으로 보더박스함*/
+}
+
+button:focus{
+  outline: none;
+}
+/*button style initialize end*/
+
+
+button.gbtn{
+  padding: 9px 15px; /*10px아닌9px인건 이유가 따로잇엇겟지*/
+}
+
+/*button type*/
+
+/*배경색잇는 버튼*/
+
+button.gbtn.normal{
+  font-size: 15px;
+  color: white;
+  padding: 10px 15px;
+  min-width: 110px;
+  background-color: #333;
+}
+
+/*배경투명 버튼*/
+
+button.gbtn.transparent{
+  border: 1px solid #999;
+  /* background: transparent;  우선순위가 낮을때 추가하면되는 용도*/
+}
+
+button.gbtn.transparent:focus{
+  border: 1px solid #333;
+}
+
+
+/* button color type*/
+
+
+button.gbtn.normal.grey{
+
+  background-color: #818286;
+}
+
+/*button common end*/
+
+/*table style start*/
+.table_a{
+  width: 100%; /*table영역도 넓이는 정해줘야댐*/
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table_a td{
+  position: relative; /*table layout 에 대비해서 정렬위해 준거*/
+  border: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  padding: 13px 8px 13px;
+  font-size: 14px;
+}
+
+.table_a td > *{
+  float: left;
+}
+
+.table_a tr td:nth-child(1){
+  width: 120px;
+  text-align: left;
+  padding-left: 20px;  /* 주의사항*모양 사이늘리려고 */
+  color: #333;
+}
+
+.table_a tr td em{
+  position: absolute;
+  display: inline-block;
+  font-size: 8px;
+  color: #f85858;
+  left: 0;
+}
+
+.table_a tr td > i{
+  margin: 5px 5px 0;
+}
+
+
+.text{
+  display: inline-block;
+  font-size: 14px;
+  color: #999;
+  margin: 7px 0 0 5px;
+}
+
+
+/*table style end*/
+
+
+
+
+
+
+
+
+
+/*general ui 만들기end*/

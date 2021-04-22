@@ -1,0 +1,52 @@
+@charset "UTF-8";
+html{
+  line-height: normal;
+}
+
+/*general UI 영역인 자린데 general.css따로 분화해서 넣음*/
+
+/*layout*/
+#wrap{
+  max-width: 980px;
+  min-width: 780px;
+  margin: 0 auto;
+  /* background: skyblue; */
+}
+
+#wrap .title{
+  position: relative;
+  padding: 10px 0 0 ;
+  border-bottom: 1px solid #333;
+}
+
+#wrap .title h1{
+  display: inline-block;
+  font-size: 25px;
+  line-height: 1; /*1은 위에 폰트사이즈랑 같게하겟단 말*/
+  color: #333;
+  overflow: hidden;
+}
+
+
+#wrap .title .prec{
+  float: right;
+  padding: 0;
+  color: #666;
+
+}
+
+
+#wrap .title .prec em{
+  font-size: 8px;
+  color: #f85858;
+  margin-right: 5px;
+}
+
+
+input + button{
+  margin-left: 5px;
+}
+.button_group{
+  text-align: center;
+  margin-top: 50px;
+}
